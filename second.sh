@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd fetch-step-db-based-config-demo
+cd test_dir
 echo 'second step done' >> tempfile.txt
 cat tempfile.txt
