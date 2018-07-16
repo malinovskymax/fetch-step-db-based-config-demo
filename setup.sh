@@ -1,6 +1,5 @@
- #!/bin/bash
+#!/bin/bash
 
- ls
- echo 'setup done' > tempfile.txt
- cat tempfile.txt
- 
+cd fetch-step-db-based-config-demo
+echo 'fetch/setup step done' >> tempfile.txt
+cat tempfile.txt
