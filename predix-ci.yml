@@ -1,0 +1,23 @@
+plan:
+- fetch
+- default
+- second
+
+profiles:
+  fetch:
+    script: |
+      set -e
+      git clone git@github.com:malinovskymax/fetch-step-db-based-config-demo.git
+      ./fetch-step-db-based-config-demo/setup.sh
+    output:
+      - fetch-step-db-based-config-demo
+  default:
+    input:
+      - fetch-step-db-based-config-demo
+    script: './fetch-step-db-based-config-demo/default.sh && mv fetch-step-db-based-config-demo test_dir'
+    output:
+      - test_dir
+  second:
+    input:
+      - test_dir
+    script: './test_dir/second.sh'
